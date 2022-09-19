@@ -1,0 +1,57 @@
+https://www.youtube.com/watch?v=2dG_Nl_r6s0&t=1740s
+para wsl intalar ubuntu 22 usuario
+si esta como root ejecutar: su - [nombre del usuario]
+para instalar node y npm instalar con nvm :https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+
+para el caso de neovim en windows crear una carpeta lua con un archivo basic.lua para ejecutar codigo lua
+https://vonheikemen.github.io/devlog/es/tools/configuring-neovim-using-lua/ 	<-mas info aqui
+
+neodev => nombre de usuario ubuntu
+1. ir a: https://github.com/neovim/neovim/releases/tag/v0.7.0 
+2. descargar el archivo nvim-linux64.deb
+3. con "cd" te desplazas al desktop o la carpeta donde cd ../.. 	luego cd mnt/c/users/hp/desktop
+este el archivo
+4. sudo apt install ./nvim-linux64.deb
+5. compruebas con nvim --version
+6.creas init.vim en la carpeta config/nvim (usualmente en la carpeta raiz home => .config/ crear mkdir nvim)
+	Quedaria asi: home/neodev.config/nvim/
+	* usar el comando: ls -la  para mostrar carpetas ocultas
+7.instalar plugvim de: https://github.com/junegunn/vim-plug 
+para instalar plugins
+	-1ro desscargas el archivo plug.vim
+	-lo colocas en la carpeta autoload que debe estar
+	en .config/nvim/autoload/
+	-puedes usar comandos si estas en linux
+	-en wsl solo copian el contenido al editor de vim 
+	creando el archivo plug.vim pegas presionando shift+clickDerecho
+en el archivo init.vim escribir: plug#begin() y poner la ruta donde se instalaran los plugins 
+	en wsl: plug#begin('~/.config/nvim/plugins')
+
+Plugins Autocompletado:
+-Para c++: ir a: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd
+	terminal ejecutar: cd //para ir a la raiz
+	terminal ejecutar: sudo apt-get install clangd-13
+	luego: sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-13 100
+	en init.vim poner:
+lua << EOF
+	require'lspconfig'.clangd.setup{}
+EOF
+
+
+-para instalar 
+-para instalar coc: despues de tener node>16.1 ejecutar(corepack enable) y (yarn set version stable)
+		visitar y seguir los pasos: https://yarnpkg.com/getting-started/install#updating-to-the-latest-versions
+		en la consola ir a ('~/.config/nvim/plugins/coc.nvim') 
+		instalar yarn(yarn install) y construir(yarn build) 
+		Plug 'neoclide/coc.nvim'   
+Plugins:							pesos
+- Barra inferior con informacion: vim-airline/vim-airline 	(1.27 mb)
+- Gestor de ficheros al costado: preservim/nerdtree		(1.09 mb)
+
+
+
+Configuracion de los plugins:
+"configuracion del gestor de archivos nerdtree
+
+NvimTree File Explorer: https://www.youtube.com/watch?v=SpexCBrZ1pQ
+Otros plugins: https://hannadrehman.com/top-neovim-plugins-for-developers-in-2022
