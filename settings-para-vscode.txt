@@ -1,0 +1,72 @@
+Extensiones:
+Ayu => Theme para visual studio code
+Night Wolf => Theme para visual studio code
+Dobri Next Themes and icons => Theme para visual studio code
+Material Icon Theme => Iconos para el explorador de archivos de vscode
+
+Prettier - Code formatter => Formatear Codigo
+Code Runner => Para compilar cualquier lenguaje con un click
+C/C++ Compile Run => Para compilar c++ al presionar F8
+Thunder Client => Cliente Rest para probar peticiones HTTP
+CodeSnap => Para sacar captura de un fragmento de codigo
+MySQL (Weijan Chen) => Para manejar bases de datos sql y nosql
+
+
+
+
+{
+    "editor.tabSize": 2,
+    "workbench.iconTheme": "material-icon-theme",
+    "grunt.autoDetect": "on",
+
+    "code-runner.runInTerminal": true, // se agrega para que code runner se ejecute en terminal integrado
+    "code-runner.saveFileBeforeRun": true,
+    "terminal.integrated.gpuAcceleration": "off",
+    "editor.fontFamily": "'JetBrains Mono', 'Courier New',Consolas, monospace",
+    "masmtasm.ASM.assembler": "MASM",
+    "editor.minimap.maxColumn": 100,
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "workbench.colorCustomizations": {
+        "[Dobri Next -C03- Cupcake]": {
+            "editor.background": "#000",
+            "sideBar.border": "#000",
+            "sideBar.background": "#000",
+            "sideBarSectionHeader.background": "#0d0d0d",
+            "activityBar.background": "#000",
+            "activityBar.foreground": "#ddd",
+            "statusBar.background": "#000",
+            "statusBar.border": "#000",
+            "titleBar.activeBackground": "#000",
+            "titleBar.activeForeground": "#ddd",
+            "editorGroupHeader.tabsBackground": "#000",
+            "tab.border": "#000",
+            "tab.inactiveBackground": "#000",
+            "tab.activeForeground": "#5ca3ff",
+            "tab.inactiveForeground": "#a7a7a7",
+            "tab.hoverBackground": "#131313",
+            "tab.activeBorderTop": "#000",
+            "tab.activeBorder": "#006eff",
+            "editorIndentGuide.activeBackground": "#bbb"
+        }
+    },
+    "redhat.telemetry.enabled": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "editor.minimap.enabled": false,
+    "java.configuration.runtimes": [
+    
+    ],
+    "workbench.colorTheme": "Ayu Dark",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "maven.executable.path": "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin\\mvn",
+    "spring.dashboard.openWith": "external",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    //"xml.java.home": "C:\\Program Files\\Java\\jdk-18.0.1.1",
+    
+}
